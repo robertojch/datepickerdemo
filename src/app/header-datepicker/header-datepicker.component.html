@@ -1,0 +1,40 @@
+<div class="header-datepicker">
+  <div class="header-datepicker__currentdate">
+    <div class="header-datepicker__currentdate__label">
+      <label
+      #dp="bsDatepicker"
+      bsDatepicker
+      [(bsValue)]="selectedDate"
+      >{{ selectedDate | date:'shortDate' }} (Hoy)</label>
+      
+    </div>  
+    <div class="header-datepicker__currentdate__arrow-down">
+      <svg
+        class="arrow-down"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        (click)="dp.toggle()"
+        [attr.aria-expanded]="dp.isOpen"
+      >
+        <path
+          d="M8.707 9.543a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.414 0l4-4a1 1 0 1 0-1.414-1.414L12 12.836 8.707 9.543z"
+        />
+      </svg>
+    </div>
+  </div>
+  <!--
+  <div class="header-datepicker__calendar">
+    <input
+      type="text"
+      class="form-control"
+      [minDate]="minDate"
+      [maxDate]="maxDate"
+      #dp="bsDatepicker"
+      bsDatepicker
+      [(bsValue)]="myDateValue"
+    />
+  </div>
+  -->
+</div>

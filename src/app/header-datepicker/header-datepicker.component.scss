@@ -1,0 +1,84 @@
+.header-datepicker {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: 100px;
+  background-color: #7537e3;
+  &__currentdate {
+    display: flex;
+    align-content: center;
+    &__label {
+      width: 210px;
+      height: 34px;
+      font-family: "Roboto", sans-serif;
+      font-size: 32px;
+      font-weight: 600;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.06;
+      letter-spacing: -0.7px;
+      color: white;
+    }
+    &__arrow-down {
+      width: 24px;
+      height: 24px;
+      fill: white;
+    }
+  }
+}
+
+.custom-content {
+  position: absolute;
+  z-index: 1081;
+  top: 390px;
+  left: 106px;
+  cursor: pointer;
+  align-self: center;
+}
+
+::ng-deep.bs-datepicker {
+  color: black;
+  border-radius: 20px;
+  width: 345px;
+  height: 310px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px 0 rgba(0, 15, 70, 0.1);
+  background-color: white;
+}
+
+::ng-deep.theme-green .bs-datepicker-head {
+  background: #ffffff;
+  font-weight: bold;
+}
+
+::ng-deep.bs-datepicker-head button {
+  color: #0c1f5e; //#greyblue-100
+  font-weight: bold;
+
+  width: 109px;
+  height: 25px;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  text-decoration: to-upper-case($string: "")
+}
+
+::ng-deep.theme-green .bs-datepicker-body table td span.selected,
+::ng-deep.theme-green .bs-datepicker-body table td.selected span,
+::ng-deep.theme-green .bs-datepicker-body table td span[class*="select-"]:after,
+::ng-deep.theme-green .bs-datepicker-body table td[class*="select-"] span:after {
+  background-color:#7637e3;   //#primary-default
+}
+
+::ng-deep.bs-datepicker-body {
+    padding: 20px;
+    border-radius: 0 0 3px 3px;
+    min-height: 232px;
+    min-width: 278px;
+    border:0px;
+}
