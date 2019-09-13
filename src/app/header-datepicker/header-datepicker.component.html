@@ -5,6 +5,8 @@
       #dp="bsDatepicker"
       bsDatepicker
       [(bsValue)]="selectedDate"
+      placement="bottom"
+      [bsConfig]="{ showWeekNumbers:false, isAnimated: true,adaptivePosition: true }"
       >{{ selectedDate | date:'shortDate' }} (Hoy)</label>
       
     </div>  

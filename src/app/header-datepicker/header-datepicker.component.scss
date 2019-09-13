@@ -76,9 +76,13 @@
 }
 
 ::ng-deep.bs-datepicker-body {
-    padding: 20px;
     border-radius: 0 0 3px 3px;
     min-height: 232px;
     min-width: 278px;
     border:0px;
+}
+
+::ng-deep.bs-datepicker-head {
+    text-align: center;
+    padding:0px;
 }
