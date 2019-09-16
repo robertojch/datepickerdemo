@@ -9,12 +9,14 @@ import { HeaderDatepickerComponent } from './header-datepicker/header-datepicker
 import { FormsModule} from '@angular/forms';
 import { CustomDropdownComponent } from './custom-dropdown/custom-dropdown.component';
 import { BsDropdownModule } from 'ngx-bootstrap';
+import { CustomTableComponent } from './custom-table/custom-table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderDatepickerComponent,
-    CustomDropdownComponent
+    CustomDropdownComponent,
+    CustomTableComponent
   ],
   imports: [
     BrowserModule,

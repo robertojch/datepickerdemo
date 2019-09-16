@@ -1,0 +1,17 @@
+<table width="831px">
+  <thead>
+    <tr>
+      <th *ngFor="let col of columnsDefs" [width]=col.width [innerHTML]= col.headerName></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let char of rowData">
+      <td *ngFor="let col of columnsDefs"> 
+          <div *ngIf="!col.editable; else inputctrl">{{char[col.field]}}</div>       
+          <ng-template #inputctrl>
+                <input type="text" id="name" class="input1" readonly [(ngModel)]="char[col.field]"/>
+          </ng-template>        
+      </td>
+    </tr>
+  </tbody>
+</table>
