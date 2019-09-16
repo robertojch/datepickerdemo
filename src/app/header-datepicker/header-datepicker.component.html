@@ -5,11 +5,15 @@
       #dp="bsDatepicker"
       bsDatepicker
       [(bsValue)]="selectedDate"
-      placement="bottom"
+
+      [datesDisabled]="disabledDates"
+      [isDisabled]= "isDisabled"
+      [maxDate]="maxDate"
+      (bsValueChange)="onValueChange($event)"
       [bsConfig]="{ showWeekNumbers:false, isAnimated: true,adaptivePosition: true }"
       >{{ selectedDate | date:'shortDate' }} (Hoy)</label>
-      
-    </div>  
+
+    </div>
     <div class="header-datepicker__currentdate__arrow-down">
       <svg
         class="arrow-down"

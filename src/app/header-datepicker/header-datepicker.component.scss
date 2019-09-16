@@ -1,9 +1,8 @@
 .header-datepicker {
   display: flex;
-  flex-direction: column;
-  width: 500px;
-  margin: 100px;
-  background-color: #7537e3;
+  flex:none;
+  width:250px;
+background-color: #7537e3;
   &__currentdate {
     display: flex;
     align-content: center;
@@ -44,6 +43,7 @@
   border-radius: 16px;
   box-shadow: 0 4px 10px 0 rgba(0, 15, 70, 0.1);
   background-color: white;
+  transform: translate3d(80px, 10px, 100px);
 }
 
 ::ng-deep.theme-green .bs-datepicker-head {

@@ -7,17 +7,22 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderDatepickerComponent } from './header-datepicker/header-datepicker.component';
 import { FormsModule} from '@angular/forms';
+import { CustomDropdownComponent } from './custom-dropdown/custom-dropdown.component';
+import { BsDropdownModule } from 'ngx-bootstrap';
+
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderDatepickerComponent
+    HeaderDatepickerComponent,
+    CustomDropdownComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    BsDatepickerModule.forRoot()
+    BsDatepickerModule.forRoot(),
+    BsDropdownModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
