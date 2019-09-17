@@ -1,30 +1,85 @@
-.input1{
-    padding:16px;
-      width: 100%;
-      height: 32px;
-      border-radius: 8px;
-      background-color: #f5f6f9; //var(--background-light);
-      border: 0px solid #f5f6f9;
-      color: #808aab;
-      font-size: 12px;
-      font-family: Roboto;
+input {
+  padding-right: 45px;
+  text-align: right;
+  width: 100%;
+  height: 32px;
+  border-radius: 8px;
+  background-color: #f5f6f9; //var(--background-light);
+  border: 3px solid #f5f6f9;
+  color: #0c1f5e;
+  font-size: 15px;
+  font-family: Roboto;
+  font-weight: bold;
+  line-height: 2.2;
+}
+label {
+  padding-right: 25px;
+  text-align: right;
+  color: #0c1f5e;
+  font-size: 15px;
+  font-family: Roboto;
+  font-weight: bold;
+  line-height: 2.2;
+  display:inline;
 }
 
+.cellLabel{
+  margin-right: 20px;
+}
+.unit {
+  position: relative;
+  bottom: 20px;
+  right: -25px;
+  display: block;
+  z-index: 9;
+  font-size: 11px;
 
+}
+
+button,
+table {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  color: #3d4c7e; //var(--greyblue-70);
+
+}
 tbody td {
-    text-align: center;
-    margin:10px; 
-  }
-thead tr {
-        font-family: Roboto;
-        font-size: 13px;
-        font-weight: normal;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: 1;
-        letter-spacing: normal;
-        text-align: center;
-        color:#3d4c7e; //var(--greyblue-70); 
-        border-bottom: 1px solid #f5f6f9; // #background-light    
+  text-align: center;
+  padding: 5px;
+
+  height: 30px;
+}
+thead th {
+  padding: 10px;
+  border-bottom: 1px solid #f5f6f9; // #background-light
 }
 
+tbody:before {
+  content:"@";
+  display:block;
+  line-height:10px;
+  text-indent:-99999px;
+}
+
+button{
+    width: 73px;
+    height: 32px;
+    border-radius: 16px;
+    border: solid 1px #001a72; //#secondary-default
+    background-color: #ffffff;
+}
+
+*:focus {
+  outline: none;
+}
+
+input:focus {
+
+  border: solid 1px #7637e3;  // var(--primary-default);
+}
