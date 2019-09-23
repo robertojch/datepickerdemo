@@ -17,6 +17,15 @@ export class CustomDropdownComponent implements OnInit {
     'but wait! A third!',
     'The first choice!',
     'And another choice for you.',
+    'but wait! A third!',
+    'The first choice!',
+    'And another choice for you.',
+    'but wait! A third!',
+    'The first choice!',
+    'And another choice for you.',
+    'but wait! A third!',
+    'The first choice!',
+    'And another choice for you.',
     'but wait! A third!'
   ];
 
@@ -31,8 +40,9 @@ export class CustomDropdownComponent implements OnInit {
   onShown(): void {
     console.log('Dropdown is shown');
   }
-  isOpenChange(): void {
-    console.log('Dropdown state is changed');
+  isOpenChange(event): void {
+    console.log(event);
+    console.log('Dropdown state is changed', event);
   }
 
 }

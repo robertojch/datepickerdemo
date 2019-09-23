@@ -1,6 +1,13 @@
 <app-header-datepicker></app-header-datepicker>
 <app-custom-dropdown></app-custom-dropdown>
-<div class="datosProductivos">
-    <div class="datosProductivosTitle">Datos Productivos</div>
-        <app-custom-table></app-custom-table>
+
+<div class="listadopiscinas-container">
+    <div class="listadopiscinas-container__datosProductivos">
+            <div class="datosProductivosTitle">Datos Productivos</div>
+            <app-custom-table [gridOptions]="this.gridOptions1"></app-custom-table>
+    </div>
+    <div class="listadopiscinas-container__parametros">
+            <div class="parametrosTitle">Parametros</div>
+            <app-custom-table [gridOptions]="this.gridOptions1"></app-custom-table>
+    </div>
 </div>
