@@ -18,6 +18,7 @@ export class AppComponent  implements OnInit {
   private columnsDefs1: Column[];
   private rowData1: any[];
   gridOptions1: GridOption;
+  list: Array<any>;
 
   constructor(private bsLocaleService: BsLocaleService) {
     this.bsLocaleService.use('es');
@@ -87,6 +88,25 @@ export class AppComponent  implements OnInit {
       rowData: this.rowData1,
       width: '831'
     };
+
+    this.list = [
+      { id: 1, text: 'CLA 35% 0.8' },
+      { id: 2, text: 'CLA 35% 1.2'},
+      { id: 3, text: 'CLA 35% 2.0'},
+      { id: 4, text: 'CLA 35% 2.0 AD'},
+      { id: 5, text: 'CLA 35% 2.5'},
+      { id: 6, text: 'FIN 35% 2.0'},
+      { id: 7, text: 'CLA 35% 2.5 AD'},
+      { id: 8, text: 'FIN 35% 2.5'},
+      { id: 9, text: 'CLA 35% 0.8'},
+      { id: 10, text: 'CLA 35% 1.2'},
+      { id: 11, text: 'CLA 35% 2.0'},
+      { id: 12, text: 'CLA 35% 2.0 AD'},
+      { id: 13, text: 'CLA 35% 2.5'},
+      { id: 14, text: 'FIN 35% 2.0'},
+      { id: 15, text: 'CLA 35% 2.5 AD'},
+      { id: 16, text: 'FIN 35% 2.5'}
+    ];
 
 
   }

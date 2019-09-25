@@ -1,17 +1,17 @@
-<div class="dropdown" dropdown (onShown)="onShown()" (onHidden)="onHidden()" (isOpenChange)="isOpenChange($event)">
-    <a class="label1" href id="basic-link" dropdownToggle (click)="false" aria-controls="basic-link-dropdown" data-toggle="tooltip" [title]=selectedItem.largeDescription >
-      <span class="labelText">{{selectedItem.shortDescription}}</span>
-        <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-      >
-        <path
-          d="M8.707 9.543a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.414 0l4-4a1 1 0 1 0-1.414-1.414L12 12.836 8.707 9.543z" />
-      </svg>
-
-    </a>
-    <ul id="basic-link-dropdown" *dropdownMenu class="dropdown-pools">
-        <li *ngFor="let choice of items">
-            <a class="dropdown-item" href="#" [attr.data-dd-value]="stringify(item)" (click)="onselected(choice)" data-toggle="tooltip" title="Hooray!" >{{choice}}</a>
-        </li>
-    </ul>
+<div class="dropdown" dropdown >
+  <a class="dropdown__header" href id="basic-link" dropdownToggle (click)="(false)" aria-controls="basic-link-dropdown"
+    data-toggle="tooltip" [title]="selectedItem.largeDescription">
+   <div class="dropdown__header__label" >{{ selectedItem.shortDescription }}</div>
+   <div  class="dropdown__header__arrow"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+      <path
+        d="M8.707 9.543a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.414 0l4-4a1 1 0 1 0-1.414-1.414L12 12.836 8.707 9.543z" />
+    </svg></div> 
+    
+  </a>
+  <ul id="basic-link-dropdown" *dropdownMenu class="dropdown__list">
+    <li #listItems *ngFor="let item of list">
+      <a class="dropdown__list__item" href="#" [attr.data-dd-value]="stringify(item.text)" (click)="onselected(item)"
+        data-toggle="tooltip" [title]=item.text >{{ item.text }}</a>
+    </li>
+  </ul>
 </div>
-

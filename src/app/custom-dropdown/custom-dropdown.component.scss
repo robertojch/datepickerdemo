@@ -1,66 +1,91 @@
-.label1{
+.dropdown__header {
+  
   width: 159px;
-    height: 32px;
-    background-color: #f5f6f9;
-    border-radius: 8px;
-    display: block;
-    color: #001a72;
-    font-size: 14px;
-    font-weight: 500;
-    padding-left: 10px;
-    padding-top: 5px;
+  height: 32px;
+  background-color: #f5f6f9;
+  border-radius: 8px;
+  display: block;
+  color: #001a72;
+  font-size: 14px;
+  font-weight: 500;
+  padding-left: 10px;
+  padding-top: 5px;
   &:hover {
     text-decoration: none;
-}
+  }
+  &__label{
+
+    display:inline;
+    float:left;
+  }
+  &__arrow{
+
+    display:inline;
+    float: right;
+  }
 }
 
-.labelText {
-  width: 100px;
-}
-.dropdown-pools {
 
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1000;
-    display: none;
-    float: left;
-    min-width: 10rem;
-    padding: 0.5rem 0;
-    margin: 0.125rem 0 0;
-    font-size: 1rem;
-    color: #212529;
-    text-align: left;
-    list-style: none;
-    background-color: #fff;
-    background-clip: padding-box;
-    border-radius: 8px;
-    // overflow-y: scroll;
-    height: 240px;
-width: 159px;
-    box-shadow: 0px 1px 4px rgba(227, 100, 27, 0.1);
-overflow: auto;
-    & .dropdown-item {
-      font-size: 14px;
-      line-height: 22px;
-      letter-spacing: 0;
-      color: #3d4c7e;
-      padding: .25rem 0.7rem;
-
-      &:hover {
-        background-color: #e6e8ee;
-      }
+.dropdown__list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-radius: 8px;
+  overflow-y: scroll;
+  height: 240px;
+  width: 159px;
+  box-shadow: 0px 1px 4px rgba(227, 100, 27, 0.1);
+  //overflow: auto;
+  &__item {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0;
+    color: #3d4c7e;
+    padding: 0.25rem 0.7rem;
+    display: block;
+    width: 100%;
+    clear: both;
+    font-weight: 400;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    text-decoration: none;
+    &:hover {
+      background-color: #e6e8ee;
     }
-
-    &.show {
-      display: block;
-    }
-
   }
 
-
-  .arrow-down {
-    width: 24px;
-    height: 24px;
-    fill: white;
+  &.show {
+    display: block;
   }
+}
+
+
+::-webkit-scrollbar {
+  height: 4px; /* height of horizontal scrollbar ← You're missing this */
+  width: 4px; /* width of vertical scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: #f5f6f9;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #0d1a72;
+  background-clip: padding-box;
+}
