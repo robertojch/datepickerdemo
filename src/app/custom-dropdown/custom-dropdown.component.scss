@@ -18,6 +18,7 @@
   width: 100px;
 }
 .dropdown-pools {
+
     position: absolute;
     top: 100%;
     left: 0;
@@ -36,7 +37,7 @@
     border-radius: 8px;
     // overflow-y: scroll;
     height: 240px;
-
+width: 159px;
     box-shadow: 0px 1px 4px rgba(227, 100, 27, 0.1);
 overflow: auto;
     & .dropdown-item {
@@ -44,6 +45,7 @@ overflow: auto;
       line-height: 22px;
       letter-spacing: 0;
       color: #3d4c7e;
+      padding: .25rem 0.7rem;
 
       &:hover {
         background-color: #e6e8ee;

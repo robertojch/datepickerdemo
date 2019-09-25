@@ -57,7 +57,7 @@ export class CustomDropdownComponent implements OnInit {
 
 
 //const item = JSON.parse(hightLightItem.nativeElement.getAttribute('data-dd-value'));
-    debugger;
+
 
     this.selectedItem = {
       shortDescription: data.length > 10 ? `${data.slice(0, 10)}...` : data,
