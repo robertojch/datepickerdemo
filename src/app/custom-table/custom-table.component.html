@@ -17,7 +17,8 @@
               </ng-template>
         <ng-template [ngSwitchCase]="'input'">
             <div>
-                <input type="text" id="name" readonly  [(ngModel)]="char[col.field].value" />
+              {{char[col.field].value}}
+                <input type="text" id="name"   [(ngModel)]="char[col.field].value" />
                 <span class="unit">{{char[col.field].um}}</span>
             </div>
         </ng-template>

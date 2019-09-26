@@ -1,3 +1,14 @@
+<div>
+        <h1 appEmoji="👌">Welcome to demo project</h1>
+</div>
+
+Alimento diario<input type="text" id="alimentodiario" [(ngModel)]="alimentodiario"
+[patterns]="customPatterns"
+ maxlength ="6"   mask="comma_separator.0" />{{alimentodiario }}
+
+ <br/>
+Peso vivo<input type="text" id="pesovivo" [(ngModel)]="pesovivo"
+ appOnlyNumbers  />{{pesovivo }}
 <app-header-datepicker></app-header-datepicker>
 <app-custom-dropdown [list]=list [selectedId]=-1></app-custom-dropdown>
 

@@ -14,16 +14,24 @@ defineLocale('es', esLocale);
 export class AppComponent  implements OnInit {
   title = 'datepickerdemo';
   myDateValue: Date;
-
+  alimentodiario: string;
+  pesovivo: string;
   private columnsDefs1: Column[];
   private rowData1: any[];
   gridOptions1: GridOption;
   list: Array<any>;
-
+  customPatterns: any;
   constructor(private bsLocaleService: BsLocaleService) {
     this.bsLocaleService.use('es');
   }
   ngOnInit() {
+    this.alimentodiario = '10000';
+
+
+    this.customPatterns = {0: { pattern:
+       new RegExp('^0*([0-9]|[1-8][0-9]|9[0-9]|[1-8][0-9]{2}|9[0-8][0-9]|99[0-9]|[1-8][0-9]{3}|9[0-8][0-9]{2}|99[0-8][0-9]|999[0-9]|10000)$')}};
+
+
     this.myDateValue = new Date();
     this.columnsDefs1 = [
       { field: 'ali_dia', headerName: 'Alimentaci&oacute;n <br>por d&iacute;a', cellEditor: 'input', width: '104', sortable: true },
